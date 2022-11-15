@@ -28,7 +28,7 @@ class AgendasController < ApplicationController
       @users.each do |user|
         AgendaMailer.agenda_mail(user.email).deliver
       end
-      redirect_to dashboard_url, notice: 'Contact was successfully deleted.'
+      redirect_to dashboard_url, notice: 'Agenda was successfully deleted.'
     else
       render :index, notice: '削除できません'
     end
